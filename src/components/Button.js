@@ -8,8 +8,8 @@ const dangerButtonHoverColor = '#D0021B';
 
 const Button = styled.button`
     color: #fff;
-    background-color: ${dangerButtonColor}
-    border-color: ${dangerButtonColor}
+    background-color: ${dangerButtonColor};
+    border-color: ${dangerButtonColor};
     display: inline-block;
     font-weight: normal;
     font-size: 3rem;
@@ -23,8 +23,8 @@ const Button = styled.button`
     border-radius: 0.3rem;
 
     &:hover {
-      background-color: ${dangerButtonHoverColor}
-      border-color: ${dangerButtonHoverColor}
+      background-color: ${dangerButtonHoverColor};
+      border-color: ${dangerButtonHoverColor};
     }
 `;
 
