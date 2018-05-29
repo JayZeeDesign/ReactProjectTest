@@ -8,8 +8,8 @@ const dangerButtonHoverColor = '#D0021B';
 
 const Button = styled.button`
     color: #fff;
-    background-color: ${dangerButtonColor};
-    border-color: ${dangerButtonColor};
+    background-color: ${props => props.type === 'danger' ? dangerButtonColor : buttonColor };
+    border-color: ${props => props.type === 'danger' ? dangerButtonColor : buttonColor };
     display: inline-block;
     font-weight: normal;
     font-size: 3rem;
@@ -23,13 +23,13 @@ const Button = styled.button`
     border-radius: 0.3rem;
 
     &:hover {
-      background-color: ${dangerButtonHoverColor};
-      border-color: ${dangerButtonHoverColor};
+      background-color: ${props => props.type === 'danger' ? dangerButtonHoverColor : buttonHoverColor };
+      border-color: ${props => props.type === 'danger' ? dangerButtonHoverColor : buttonHoverColor };
     }
 `;
 
 export default class extends Component {
   render() {
-    return <Button color={this.props.type}>{this.props.children}</Button>
+    return <Button type={this.props.type} onClick={this.props.onClick}>{this.props.children}</Button>
   }
 }
